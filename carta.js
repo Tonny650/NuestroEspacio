@@ -33,12 +33,6 @@ document.addEventListener("click", (e) => {
     }
 });
 
-if (localStorage.getItem("pin_ok") !== "true") {
-    window.location.href = "index.html";
-}
-
-
-
 document.getElementById("btn-regresar").addEventListener("click", () => {
     window.location.href = "index.html";
 });
