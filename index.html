@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro espacio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Pantalla PIN -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-box">
+            <h2>Ingresa tu PIN</h2>
+            <div class="pin-display" id="pin-display">••••••</div>
+            <div class="pin-pad">
+                <button class="pin-btn">1</button>
+                <button class="pin-btn">2</button>
+                <button class="pin-btn">3</button>
+                <button class="pin-btn">4</button>
+                <button class="pin-btn">5</button>
+                <button class="pin-btn">6</button>
+                <button class="pin-btn">7</button>
+                <button class="pin-btn">8</button>
+                <button class="pin-btn">9</button>
+                <button class="pin-btn" id="pin-clear">⌫</button>
+                <button class="pin-btn">0</button>
+                <button class="pin-btn" id="pin-enter">✔</button>
+            </div>
+            <p id="password-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Menú principal -->
+    <div id="main-menu" class="main-menu">
+        <h1>💖 Nuestro espacio 💖</h1>
+        <div class="menu-carousel">
+            <div class="menu-item" data-action="carta">
+                <img src="res/img/Carta.png" alt="Carta">
+                <p>Carta</p>
+            </div>
+            <div class="menu-item" data-action="contador">
+                <img src="res/img/Time.png" alt="Contador">
+                <p>Contador</p>
+            </div>
+            <div class="menu-item" data-action="fotos">
+                <img src="res/img/Photo.png" alt="Fotos">
+                <p>Fotos</p>
+            </div>
+        </div>
+        <button id="btn-logout" class="logout-btn">Cerrar sesión</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

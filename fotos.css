@@ -1,0 +1,221 @@
+body {
+    background: #fff0f5;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    font-family: "Marck Script", serif;
+    color: #ff477e;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.foto {
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+}
+
+.foto img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* Mantiene todas del mismo tamaño */
+    border-radius: 8px;
+}
+
+.foto p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-contenido {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+#modal-fecha {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Botón cerrar modal */
+#cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#cerrar-modal:hover {
+    color: #ff477e;
+}
+
+/* Botón regresar */
+#btn-regresar {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #ff477e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#btn-regresar:hover {
+    background: #e63950;
+}
+
+/* ====== Ajustes Responsivos ====== */
+
+/* Pantallas pequeñas (teléfonos) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    /* Contenedor general */
+    body {
+        padding: 10px;
+    }
+
+    /* Botones */
+    button, .logout-btn, #btn-regresar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Menú principal */
+    .menu-item {
+        width: 110px;
+    }
+    .menu-item img {
+        height: auto;
+    }
+
+    /* PIN Screen */
+    .pin-display {
+        font-size: 26px;
+        letter-spacing: 6px;
+    }
+    .pin-pad {
+        grid-template-columns: repeat(3, 60px);
+        gap: 8px;
+    }
+    .pin-btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Carta */
+    .contenedor {
+        width: 90%;
+    }
+    .sobre {
+        width: 100%;
+        height: auto;
+    }
+    .carta {
+        font-size: 11px;
+        padding: 12px;
+    }
+
+    /* Contador */
+    .contador {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    /* Galería de fotos */
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .foto img {
+        height: 100px;
+    }
+
+    /* Modal de fotos */
+    .modal-contenido {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    #modal-fecha {
+        font-size: 12px;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    .menu-item {
+        width: 130px;
+    }
+    .pin-display {
+        font-size: 30px;
+    }
+    .contenedor {
+        width: 350px;
+    }
+    .foto img {
+        height: 120px;
+    }
+}
+
+/* Pantallas grandes (escritorio ancho) */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 40px;
+    }
+    .menu-carousel {
+        justify-content: center;
+    }
+    .galeria {
+        max-width: 1000px;
+        margin: auto;
+    }
+}

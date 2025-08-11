@@ -1,0 +1,181 @@
+body {
+    background: #ffe6eb;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+}
+
+h1 {
+    font-family: "Marck Script", serif;
+    color: #ff477e;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contador {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contador span {
+    font-weight: bold;
+    color: #ff477e;
+}
+
+#btn-regresar {
+    margin-top: 30px;
+    padding: 10px 15px;
+    background: #ff477e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#btn-regresar:hover {
+    background: #e63950;
+}
+
+
+/* Animación del fondo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Corazones flotando */
+.contador::before {
+    content: "❤️ 🥰 💞 😘 💓 😻 💖 ✨✨✨ Te Amo ✨✨✨ 💖 💘 💗 💝 ❤️‍🔥 😍 💕";
+    position: absolute;
+    font-size: 40px;
+    animation: floatHearts 8s linear infinite;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes floatHearts {
+    0% { top: 100%; opacity: 0; }
+    30% { opacity: 1; }
+    100% { top: -100px; opacity: 0; }
+}
+
+/* ====== Ajustes Responsivos ====== */
+
+/* Pantallas pequeñas (teléfonos) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    /* Contenedor general */
+    body {
+        padding: 10px;
+    }
+
+    /* Botones */
+    button, .logout-btn, #btn-regresar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Menú principal */
+    .menu-item {
+        width: 110px;
+    }
+    .menu-item img {
+        height: auto;
+    }
+
+    /* PIN Screen */
+    .pin-display {
+        font-size: 26px;
+        letter-spacing: 6px;
+    }
+    .pin-pad {
+        grid-template-columns: repeat(3, 60px);
+        gap: 8px;
+    }
+    .pin-btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Carta */
+    .contenedor {
+        width: 90%;
+    }
+    .sobre {
+        width: 100%;
+        height: auto;
+    }
+    .carta {
+        font-size: 11px;
+        padding: 12px;
+    }
+
+    /* Contador */
+    .contador {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    /* Galería de fotos */
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .foto img {
+        height: 100px;
+    }
+
+    /* Modal de fotos */
+    .modal-contenido {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    #modal-fecha {
+        font-size: 12px;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    .menu-item {
+        width: 130px;
+    }
+    .pin-display {
+        font-size: 30px;
+    }
+    .contenedor {
+        width: 350px;
+    }
+    .foto img {
+        height: 120px;
+    }
+}
+
+/* Pantallas grandes (escritorio ancho) */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 40px;
+    }
+    .menu-carousel {
+        justify-content: center;
+    }
+    .galeria {
+        max-width: 1000px;
+        margin: auto;
+    }
+}

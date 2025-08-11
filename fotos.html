@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros recuerdos</title>
+    <link rel="stylesheet" href="fotos.css">
+    <script>
+        // Verificar autenticación
+        if (localStorage.getItem("autenticado") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>📸 Nuestros recuerdos 📸</h1>
+
+    <div class="galeria">
+        <!-- Ejemplos de fotos (puedes duplicar o cambiar rutas y fechas) -->
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto1_25_Junio_2025.jpg" alt="Recuerdo 1">
+            <p>25/06/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto2_29_Junio_2025.jpg" alt="Recuerdo 2">
+            <p>29/06/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto3_18_Julio_2025.jpg" alt="Recuerdo 3">
+            <p>18/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto4_19_Julio_2025.jpg" alt="Recuerdo 4">
+            <p>19/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto5_20_Julio_2025.jpg" alt="Recuerdo 5">
+            <p>20/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto6_23_Julio_2025.jpg" alt="Recuerdo 6">
+            <p>23/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto7_24_Julio_2025.jpg" alt="Recuerdo 7">
+            <p>24/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto8_25_Julio_2025.jpg" alt="Recuerdo 8">
+            <p>25/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto9_26_Julio_2025.jpg" alt="Recuerdo 9">
+            <p>26/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto10_27_Julio_2025.jpg" alt="Recuerdo 10">
+            <p>27/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto11_28_Julio_2025.jpg" alt="Recuerdo 11">
+            <p>28/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto12_29_Julio_2025.jpg" alt="Recuerdo 12">
+            <p>29/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto13_30_Julio_2025.jpg" alt="Recuerdo 13">
+            <p>30/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto14_31_Julio_2025.jpg" alt="Recuerdo 14">
+            <p>31/07/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto15_1_Agosto_2025.jpg" alt="Recuerdo 15">
+            <p>01/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto16_2_Agosto_2025.jpg" alt="Recuerdo 16">
+            <p>02/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto17_3_Agosto_2025.jpg" alt="Recuerdo 17">
+            <p>03/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto18_4_Agosto_2025.jpg" alt="Recuerdo 18">
+            <p>04/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto19_5_Agosto_2025.jpg" alt="Recuerdo 19">
+            <p>05/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto20_6_Agosto_2025.jpg" alt="Recuerdo 20">
+            <p>06/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto21_7_Agosto_2025.jpg" alt="Recuerdo 21">
+            <p>07/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto22_8_Agosto_2025.jpg" alt="Recuerdo 22">
+            <p>08/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto23_9_Agosto_2025.jpg" alt="Recuerdo 23">
+            <p>09/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto24_10_Agosto_2025.jpg" alt="Recuerdo 24">
+            <p>10/08/2025</p>
+        </div>
+        <div class="foto">
+            <img src="res/img/recuerdos/Foto25_11_Agosto_2025.jpg" alt="Recuerdo 25">
+            <p>11/08/2025</p>
+        </div>
+    </div>
+
+    <!-- Modal para imagen grande -->
+    <div id="modal" class="modal">
+        <span id="cerrar-modal">&times;</span>
+        <img id="modal-img" class="modal-contenido">
+        <p id="modal-fecha"></p>
+    </div>
+
+    <button id="btn-regresar">← Regresar</button>
+
+    <script src="fotos.js"></script>
+</body>
+</html>
